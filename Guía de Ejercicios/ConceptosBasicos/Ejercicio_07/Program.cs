@@ -11,13 +11,13 @@ namespace Ejercicio_07
     {
         static void Main(string[] args)
         {
-            Console.Title = "Ejercicio_06";
+            Console.Title = "Ejercicio_07";
             int day = 0;
             int month = 0;
             int year = 0;
             string linea;
             bool flag = false;
-            int acumuladorDias = 0;
+            int acumuladorDias;
             
             // Tomo y valido datos.
             Console.WriteLine("Ingrese su fecha de nacimiento:");
@@ -34,7 +34,17 @@ namespace Ejercicio_07
             if (!flag) Console.WriteLine("Datos incorrectos.");
             else
             {
-                for (int i = year; i <= DateTime.Now.Year; i++)
+                DateTime fechaNacimiento = new DateTime(year, month, day);
+                for (acumuladorDias = 0; fechaNacimiento.Date<DateTime.Now.Date; fechaNacimiento = fechaNacimiento.AddDays(1))
+                {
+                    acumuladorDias++;                    
+                }
+
+                Console.WriteLine("La persona vivió "+acumuladorDias.ToString() + " días.");
+
+
+                
+                /*for (int i = year; i <= DateTime.Now.Year; i++)
                 {
                     // Dìas del primer año.
                     if (i == year && year!=DateTime.Now.Year)
@@ -70,9 +80,8 @@ namespace Ejercicio_07
                         if (ConceptosBasicos.IsBisiesto(i)) acumuladorDias += 366;
                         else acumuladorDias += 365;
                     }
-                }
+                }*/
             }
-            Console.WriteLine(acumuladorDias.ToString());
             Console.ReadKey();
         }
 
