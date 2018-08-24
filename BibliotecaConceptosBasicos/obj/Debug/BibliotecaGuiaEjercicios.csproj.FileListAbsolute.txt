@@ -1,6 +1,0 @@
-c:\users\federico.morales\source\repos\ConceptosBasicos\BibliotecaConceptosBasicos\bin\Debug\BibliotecaConceptosBasicos.dll
-c:\users\federico.morales\source\repos\ConceptosBasicos\BibliotecaConceptosBasicos\bin\Debug\BibliotecaConceptosBasicos.pdb
-c:\users\federico.morales\source\repos\ConceptosBasicos\BibliotecaConceptosBasicos\obj\Debug\BibliotecaGuiaEjercicios.csprojAssemblyReference.cache
-c:\users\federico.morales\source\repos\ConceptosBasicos\BibliotecaConceptosBasicos\obj\Debug\BibliotecaGuiaEjercicios.csproj.CoreCompileInputs.cache
-c:\users\federico.morales\source\repos\ConceptosBasicos\BibliotecaConceptosBasicos\obj\Debug\BibliotecaConceptosBasicos.dll
-c:\users\federico.morales\source\repos\ConceptosBasicos\BibliotecaConceptosBasicos\obj\Debug\BibliotecaConceptosBasicos.pdb
