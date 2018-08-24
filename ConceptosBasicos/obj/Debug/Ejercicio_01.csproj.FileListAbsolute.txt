@@ -1,0 +1,7 @@
+c:\users\federico.morales\source\repos\ConceptosBasicos\ConceptosBasicos\bin\Debug\ConceptosBasicos.exe.config
+c:\users\federico.morales\source\repos\ConceptosBasicos\ConceptosBasicos\bin\Debug\ConceptosBasicos.exe
+c:\users\federico.morales\source\repos\ConceptosBasicos\ConceptosBasicos\bin\Debug\ConceptosBasicos.pdb
+c:\users\federico.morales\source\repos\ConceptosBasicos\ConceptosBasicos\obj\Debug\Ejercicio_01.csprojAssemblyReference.cache
+c:\users\federico.morales\source\repos\ConceptosBasicos\ConceptosBasicos\obj\Debug\Ejercicio_01.csproj.CoreCompileInputs.cache
+c:\users\federico.morales\source\repos\ConceptosBasicos\ConceptosBasicos\obj\Debug\ConceptosBasicos.exe
+c:\users\federico.morales\source\repos\ConceptosBasicos\ConceptosBasicos\obj\Debug\ConceptosBasicos.pdb
