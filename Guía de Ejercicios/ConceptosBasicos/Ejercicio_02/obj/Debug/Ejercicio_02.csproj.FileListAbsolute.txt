@@ -1,0 +1,6 @@
+c:\users\federico.morales\source\repos\ConceptosBasicos\Ejercicio_02\bin\Debug\Ejercicio_02.exe.config
+c:\users\federico.morales\source\repos\ConceptosBasicos\Ejercicio_02\bin\Debug\Ejercicio_02.exe
+c:\users\federico.morales\source\repos\ConceptosBasicos\Ejercicio_02\bin\Debug\Ejercicio_02.pdb
+c:\users\federico.morales\source\repos\ConceptosBasicos\Ejercicio_02\obj\Debug\Ejercicio_02.csproj.CoreCompileInputs.cache
+c:\users\federico.morales\source\repos\ConceptosBasicos\Ejercicio_02\obj\Debug\Ejercicio_02.exe
+c:\users\federico.morales\source\repos\ConceptosBasicos\Ejercicio_02\obj\Debug\Ejercicio_02.pdb
