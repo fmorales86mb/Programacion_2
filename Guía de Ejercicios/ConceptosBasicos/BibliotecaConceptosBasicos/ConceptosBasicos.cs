@@ -91,7 +91,7 @@ namespace BibliotecaGuiaEjercicios
         }
 
         /// <summary>
-        /// Solicita valor por consola.
+        /// Solicita un entero por consola.
         /// </summary>
         /// <param name="mSolicitud"> Mensaje de solicitud.</param>
         /// <param name="mError">Mensaje de error.</param>
@@ -105,6 +105,36 @@ namespace BibliotecaGuiaEjercicios
             string linea = Console.ReadLine();
 
             if (!string.IsNullOrEmpty(linea)) valido = int.TryParse(linea, out nro);
+            if (!valido) Console.WriteLine(mError);
+
+            return valido;
+        }
+
+        /// <summary>
+        /// Solicita por consola un entero mayor o igual al valor indicado.
+        /// </summary>
+        /// <param name="mSolicitud"> Mensaje de solicitud.</param>
+        /// <param name="mError">Mensaje de error.</param>
+        /// <param name="nro">referencia al entero.</param>
+        /// <param name="valMinimo">Valor mínimo permitido.</param>
+        /// <returns>Validación del valor ingresado.</returns>
+        public static bool PedirEntero(string mSolicitud, string mError, ref int nro, int valMinimo)
+        {
+            bool valido = false;
+            int numero;
+
+            Console.Write(mSolicitud);
+            string linea = Console.ReadLine();
+
+            if (!string.IsNullOrEmpty(linea))
+            {
+                if (int.TryParse(linea, out numero) && numero >= valMinimo)
+                {
+                    nro = numero;
+                    valido = true;
+                }
+            }
+                
             if (!valido) Console.WriteLine(mError);
 
             return valido;
