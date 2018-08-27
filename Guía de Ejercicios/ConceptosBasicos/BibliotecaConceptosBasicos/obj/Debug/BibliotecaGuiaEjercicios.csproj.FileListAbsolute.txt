@@ -4,3 +4,9 @@ c:\users\federico.morales\source\repos\ConceptosBasicos\BibliotecaConceptosBasic
 c:\users\federico.morales\source\repos\ConceptosBasicos\BibliotecaConceptosBasicos\obj\Debug\BibliotecaGuiaEjercicios.csproj.CoreCompileInputs.cache
 c:\users\federico.morales\source\repos\ConceptosBasicos\BibliotecaConceptosBasicos\obj\Debug\BibliotecaConceptosBasicos.dll
 c:\users\federico.morales\source\repos\ConceptosBasicos\BibliotecaConceptosBasicos\obj\Debug\BibliotecaConceptosBasicos.pdb
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\BibliotecaConceptosBasicos\bin\Debug\BibliotecaConceptosBasicos.dll
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\BibliotecaConceptosBasicos\bin\Debug\BibliotecaConceptosBasicos.pdb
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\BibliotecaConceptosBasicos\obj\Debug\BibliotecaGuiaEjercicios.csprojAssemblyReference.cache
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\BibliotecaConceptosBasicos\obj\Debug\BibliotecaGuiaEjercicios.csproj.CoreCompileInputs.cache
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\BibliotecaConceptosBasicos\obj\Debug\BibliotecaConceptosBasicos.dll
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\BibliotecaConceptosBasicos\obj\Debug\BibliotecaConceptosBasicos.pdb
