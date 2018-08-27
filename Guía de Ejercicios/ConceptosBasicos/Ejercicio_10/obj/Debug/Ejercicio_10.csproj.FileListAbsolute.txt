@@ -1,0 +1,10 @@
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\Ejercicio_10\bin\Debug\Ejercicio_10.exe.config
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\Ejercicio_10\bin\Debug\Ejercicio_10.exe
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\Ejercicio_10\bin\Debug\Ejercicio_10.pdb
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\Ejercicio_10\bin\Debug\BibliotecaConceptosBasicos.dll
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\Ejercicio_10\bin\Debug\BibliotecaConceptosBasicos.pdb
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\Ejercicio_10\obj\Debug\Ejercicio_10.csprojAssemblyReference.cache
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\Ejercicio_10\obj\Debug\Ejercicio_10.csproj.CoreCompileInputs.cache
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\Ejercicio_10\obj\Debug\Ejercicio_10.csproj.CopyComplete
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\Ejercicio_10\obj\Debug\Ejercicio_10.exe
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\ConceptosBasicos\Ejercicio_10\obj\Debug\Ejercicio_10.pdb
