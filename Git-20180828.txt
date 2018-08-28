@@ -1,0 +1,134 @@
+- NOMBRE DE USUARIO Y MAIL
+
+	git config --global user.name "nombre de usuario"
+	git config --global user.mail "<mail@mail.com>"
+
+--- CLONAR REPOSITORIO ---
+
+Debo estar parado en el directorio donde quiero que se clone.
+	git clone http/dirección del repositorio (también puede ser local.)
+
+
+--- STAGIN INDEX ---
+
+Se preparan los archivos para el commint.
+	git add . (agrega todos los archivos)
+	git add NombreArchivo (agrega un archivo puntual)
+	git status (muestra archivos añadidos o no, para el commit) 	
+
+
+--- COMMIT ---
+
+Confirma los cambios y los registra en el repositorio.
+	git commit
+
+Escribir mensaje. (qué cambió, por qué, qué se espera con el cambio)
+El mensaje está compuesto por un Resumen (una línea) y comentarios.
+Para salir del editor, guardar el mje y confirmar el commit: 
+	ctrl flecha hacia abajo y luego :wq
+
+
+--- ELIMINAR ARCHIVOS ---
+
+Se eliminan del directorio y se incluyen los cambios en el stagin index
+	git rm NombreArchivo
+
+
+--- MOVER ARCHIVOS ---
+
+Se mueven, los cambios que registra git van a ser la eliminación de un archivo y
+la creación de el mismo en otro lugar. Si creo una nueva carpeta con archivos dentro, 
+git status me va a mostrar sólo la nueva carpeta. Al incluirla con git add se van a 
+incluir la carpeta con todos los archivos dentro.
+
+
+--- DESHACER CAMBIOS ---
+
+Si queremos quitar un archivo del stagin index ejecutamos
+	git reset HEAD NombreArchivo
+
+Si, por el contrario, queremos volver atrás con el cambio hecho en el archivo, ejecutamos
+	git checkout -- NombreArchivo (esto lo devuelve a su estado en el commit anterior)
+
+
+--- VER HISTORIAL DE COMMITS ---
+
+Lista de commits:
+	git log
+
+Para ir viendo más commits, barra espaciadora. Para salir, q.
+Para ver resumen de los commits:
+	git log --oneline
+
+
+--- MANEJO DE RAMAS ---
+
+Para crear un branch desde el commit en el que estamos parados:
+	git branch NombreRama
+
+Para ver los branch existentes:
+	git branch 
+
+Para cambiar de branch:
+	git checkout NombreRama
+
+Para crear branch y cambiar a ese:
+	git checkout -b NombreNuevaRama
+
+Para borrar una rama:
+	git branch -d NombreRama	
+
+Para ver commits por rama:
+	git log --oneline --decorate
+
+
+--- FUSIONAR RAMAS ----
+
+De RamaA a RamaB, esto puede o no generar conflictos.
+	git checkout RamaB (me paro en la rama destino)
+	git merge RamaA (indico la rama de origen)
+
+Si se genera un Conflicto al hacer merge:
+Con status vemos los archivos que presentan conflicto. Git va a agregar a éstos marcas que nos van
+a indicar dónde se presenta el conflicto dentro de el o los archivos.
+Para corregir el conflicto sólo es necesario borrar el cambio que no queremos mantener y las marcas de git.
+Luego se guarda el documento y se hace un add del mismo. Git entiende que resolvimos el conflicto y cierra el commit 
+automáticamente.
+
+
+--- IR A COMMITS REALIZADOS ---
+
+Para pararnos en un commit anterior:
+	git checkout s8364vks82 (código corto del commit)
+
+Esto mueve el head a la posición del commit que inidcamos. Podemos generar un branch desde ahí o 
+simplemente revisar los archivos en ese contexto.
+Para volver el head a la posición del último commit:
+	git checkout NombreRama 
+
+
+-- TAGS EN COMMIT --- 
+
+Para agregar un tag al commit en el que estoy:
+	git tag TextoDelTag 
+
+Para agregar un tag a un commit anterior:
+	git tag TextoDelTag s83sj2kd (código corto del commit)
+
+Para ir a un commit usando su tag:
+	git checkout TagDelCommit
+
+Los tags sirven para marcar versiones y ptos a los que podemos querer volver.
+
+
+--- REPOSITORIOS REMOTOS ---
+
+Para subir los cambios a un repositorio remoto:
+	git status (para ver qué vamos a subir)
+	git push (sube los commits realizados)
+
+Para bajar cambios del repositorio remoto:
+	git pull
+
+Para ver las ramas remotas:
+	git branch --all
