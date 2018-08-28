@@ -1,0 +1,10 @@
+C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_12\obj\Debug\Ejercicio_12.csprojAssemblyReference.cache
+C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_12\obj\Debug\Ejercicio_12.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_12\bin\Debug\Ejercicio_12.exe.config
+C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_12\bin\Debug\Ejercicio_12.exe
+C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_12\bin\Debug\Ejercicio_12.pdb
+C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_12\bin\Debug\BibliotecaMetodosEstaticos.dll
+C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_12\bin\Debug\BibliotecaMetodosEstaticos.pdb
+C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_12\obj\Debug\Ejercicio_12.csproj.CopyComplete
+C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_12\obj\Debug\Ejercicio_12.exe
+C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_12\obj\Debug\Ejercicio_12.pdb
