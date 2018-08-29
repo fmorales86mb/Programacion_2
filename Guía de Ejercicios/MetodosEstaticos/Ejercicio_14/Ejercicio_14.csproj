@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BibliotecaMetodosEstaticos\BibliotecaMetodosEstaticos.csproj">
+      <Project>{2e4d4112-aa62-4157-a955-59366758950c}</Project>
+      <Name>BibliotecaMetodosEstaticos</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

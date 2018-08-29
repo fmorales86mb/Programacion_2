@@ -99,5 +99,32 @@ namespace BibliotecaMetodosEstaticos
 
       return valido;
     }
+
+    /// <summary>
+    /// Solicita char de entre una lista.
+    /// </summary>
+    /// <param name="mSolicitud"> Mensaje de solicitud.</param>
+    /// <param name="mError">Mensaje de error.</param>
+    /// <param name="chars">lista de caracteres posibles.</param>
+    /// <param name="c">referencia al char.</param>
+    /// <returns>Validación del valor ingresado.</returns>
+    public static bool PedirCharAcotado(string mSolicitud, string mError, char[] chars, ref char c)
+    {
+      bool valido = false;
+      
+      Console.Write(mSolicitud);
+      string linea = Console.ReadLine();
+      char letra;
+
+      if (!string.IsNullOrEmpty(linea) && linea.IndexOfAny(chars) >= 0 && linea.Length == 1)
+      {
+        letra = (linea.ToCharArray(0, 1))[0];
+        c = letra;
+        valido = true;
+      }
+      else Console.WriteLine(mError);
+
+      return valido;
+    }
   }
 }

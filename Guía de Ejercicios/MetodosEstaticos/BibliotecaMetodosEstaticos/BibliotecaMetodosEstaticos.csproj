@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calcluladora.cs" />
     <Compile Include="CalculoDeArea.cs" />
     <Compile Include="Conversor.cs" />
     <Compile Include="Matematica.cs" />
