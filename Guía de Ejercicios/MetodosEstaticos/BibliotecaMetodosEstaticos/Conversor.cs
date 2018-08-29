@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace BibliotecaMetodosEstaticos
 {
-  public class Conversor
-  {
-    public static string DecimalBinario(double valor)
+    public class Conversor
     {
-      return "bla";
-    }
+        public static string DecimalBinario(double valor)
+        {
+            return "bla";
+        }
 
-    public static double BinarioDecimal(string valor)
-    {
-      return 2;
+        public static double BinarioDecimal(string valor)
+        {
+            return 2;
+        }
     }
-  }
 }

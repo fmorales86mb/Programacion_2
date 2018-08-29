@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace BibliotecaMetodosEstaticos
 {
-  public class ValidarRespuesta
-  {
-    public static bool ValidaS_N(char c)
+    public class ValidarRespuesta
     {
-      bool isS = false;
-      if (c == 'S') isS = true;
-      return isS;
+        /// <summary>
+        /// Evalua si el valor es S
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns>Verdadero si es 'S' o 's'</returns>
+        public static bool ValidaS_N(char c)
+        {
+            bool isS = false;
+            if (c == 'S' || c == 's') isS = true;
+            return isS;
+        }
     }
-  }
 }

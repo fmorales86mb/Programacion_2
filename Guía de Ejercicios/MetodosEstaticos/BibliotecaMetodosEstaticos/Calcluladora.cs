@@ -6,39 +6,39 @@ using System.Threading.Tasks;
 
 namespace BibliotecaMetodosEstaticos
 {
-  public class Calcluladora
-  {
-    public static double Calcular(double nro1, double nro2, char operacion)
+    public class Calcluladora
     {
-      double resultado = 0;
-      switch(operacion)
-      {
-        case '+':
-          resultado = nro1 + nro2;
-          break;
-        case '-':
-          resultado = nro1 - nro2;
-          break;
-        case '*':
-          resultado = nro1 * nro2;
-          break;
-        case '/':
-          if (Validar(nro2)) resultado = nro1 / nro2;
-          else if (nro1 > 0) resultado = double.PositiveInfinity;
-          else if (nro1 < 0) resultado = double.NegativeInfinity;          
-          break;
-        default:
-          break;
-      }
+        public static double Calcular(double nro1, double nro2, char operacion)
+        {
+            double resultado = 0;
+            switch (operacion)
+            {
+                case '+':
+                    resultado = nro1 + nro2;
+                    break;
+                case '-':
+                    resultado = nro1 - nro2;
+                    break;
+                case '*':
+                    resultado = nro1 * nro2;
+                    break;
+                case '/':
+                    if (Validar(nro2)) resultado = nro1 / nro2;
+                    else if (nro1 > 0) resultado = double.PositiveInfinity;
+                    else if (nro1 < 0) resultado = double.NegativeInfinity;
+                    break;
+                default:
+                    break;
+            }
 
-      return resultado;
-    }
+            return resultado;
+        }
 
-    private static bool Validar(double nro2)
-    {
-      bool esValido = false;
-      if (nro2 != 0) esValido = true;
-      return esValido;
+        private static bool Validar(double nro2)
+        {
+            bool esValido = false;
+            if (nro2 != 0) esValido = true;
+            return esValido;
+        }
     }
-  }
 }
