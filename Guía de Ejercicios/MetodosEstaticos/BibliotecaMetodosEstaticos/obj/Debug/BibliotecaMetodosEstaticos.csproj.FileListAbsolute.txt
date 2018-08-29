@@ -4,3 +4,9 @@ C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\BibliotecaMeto
 C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\BibliotecaMetodosEstaticos\obj\Debug\BibliotecaMetodosEstaticos.csproj.CoreCompileInputs.cache
 C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\BibliotecaMetodosEstaticos\obj\Debug\BibliotecaMetodosEstaticos.dll
 C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\BibliotecaMetodosEstaticos\obj\Debug\BibliotecaMetodosEstaticos.pdb
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\BibliotecaMetodosEstaticos\bin\Debug\BibliotecaMetodosEstaticos.dll
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\BibliotecaMetodosEstaticos\bin\Debug\BibliotecaMetodosEstaticos.pdb
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\BibliotecaMetodosEstaticos\obj\Debug\BibliotecaMetodosEstaticos.csprojAssemblyReference.cache
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\BibliotecaMetodosEstaticos\obj\Debug\BibliotecaMetodosEstaticos.csproj.CoreCompileInputs.cache
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\BibliotecaMetodosEstaticos\obj\Debug\BibliotecaMetodosEstaticos.dll
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\BibliotecaMetodosEstaticos\obj\Debug\BibliotecaMetodosEstaticos.pdb

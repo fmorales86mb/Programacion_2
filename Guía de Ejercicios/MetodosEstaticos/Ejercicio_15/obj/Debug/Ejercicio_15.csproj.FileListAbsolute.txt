@@ -8,3 +8,13 @@ C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\o
 C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\obj\Debug\Ejercicio_15.csproj.CopyComplete
 C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\obj\Debug\Ejercicio_15.exe
 C:\Users\alumno\Desktop\Repo\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\obj\Debug\Ejercicio_15.pdb
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\bin\Debug\Ejercicio_15.exe.config
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\bin\Debug\Ejercicio_15.exe
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\bin\Debug\Ejercicio_15.pdb
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\bin\Debug\BibliotecaMetodosEstaticos.dll
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\bin\Debug\BibliotecaMetodosEstaticos.pdb
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\obj\Debug\Ejercicio_15.csprojAssemblyReference.cache
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\obj\Debug\Ejercicio_15.csproj.CoreCompileInputs.cache
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\obj\Debug\Ejercicio_15.csproj.CopyComplete
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\obj\Debug\Ejercicio_15.exe
+C:\Users\federico.morales\source\repos\Programacion_2\Guía de Ejercicios\MetodosEstaticos\Ejercicio_15\obj\Debug\Ejercicio_15.pdb

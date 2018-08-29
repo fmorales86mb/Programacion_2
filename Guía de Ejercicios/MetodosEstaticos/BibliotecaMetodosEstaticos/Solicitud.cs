@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -121,6 +120,28 @@ namespace BibliotecaMetodosEstaticos
                 letra = (linea.ToCharArray(0, 1))[0];
                 c = letra;
                 valido = true;
+            }
+            else Console.WriteLine(mError);
+
+            return valido;
+        }
+
+        /// <summary>
+        /// Solicita y evalua S o N para continuar.
+        /// </summary>
+        /// <param name="mSolicitud"> Mensaje de solicitud.</param>
+        /// <param name="mError">Mensaje de error.</param>        
+        /// <returns>Verdadero si se ingres s o S.</returns>
+        public static bool PedirS_N(string mSolicitud, string mError)
+        {
+            bool valido = false;
+
+            Console.Write(mSolicitud);
+            string linea = Console.ReadLine();
+
+            if (!string.IsNullOrEmpty(linea))
+            {
+                if (linea.ToUpper().Trim() == "S") valido = true;
             }
             else Console.WriteLine(mError);
 
