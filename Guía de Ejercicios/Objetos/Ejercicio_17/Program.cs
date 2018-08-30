@@ -65,12 +65,16 @@ namespace Ejercicio_17
                             if (Solicitud.PedirEntero("Gasto de tinta: ", "Valor erroneo.", ref gasto))
                             {
                                 boligrafo.Pintar(gasto, out dibujo);
+                                Console.ForegroundColor = boligrafo.GetColor();
                                 Console.WriteLine(dibujo);
+                                Console.ResetColor();
+                                Console.ReadKey();
                             }                            
                             break;
                         case 2:
                             boligrafo.Recargar();
-                            Console.WriteLine("Se recargó el bolígrafo.");                            
+                            Console.WriteLine("Se recargó el bolígrafo.");
+                            Console.ReadKey();
                             break;
                         case 3:
                             volver = true;
