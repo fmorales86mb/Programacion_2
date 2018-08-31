@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BibliotecaObjetos
+namespace BibliotecaSobrecarga
 {
     public class Menu
     {
