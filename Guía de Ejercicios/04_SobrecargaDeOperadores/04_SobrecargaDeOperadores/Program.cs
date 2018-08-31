@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _04_SobrecargaDeOperadores
+namespace Ejercicio_19
 {
     class Program
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
