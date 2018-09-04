@@ -10,7 +10,7 @@ namespace Ejercicio_20
   {
     static void Main(string[] args)
     {
-      Console.
+      
     }
   }
 }
