@@ -39,5 +39,18 @@ namespace Sobrecargas
     {
       return (metro.valor != cent.valor / 100);
     }
+
+    // sobrecarga de casteo.
+    // explicito: uso (metro)centimetro
+    public static explicit operator Metro(Centimetro cent)
+    {
+      return new Metro(cent.valor / 100);
+    }
+
+    //implicito no uso nada, el casteo se hace soo
+    public static implicit operator Centimetro(Metro cent)
+    {
+      return new Centimetro(cent.valor / 100);
+    }
   }
 }

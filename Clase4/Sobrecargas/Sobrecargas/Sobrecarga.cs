@@ -11,7 +11,10 @@ namespace Sobrecargas
 
     /*
      * cuando creo un constructor (con al menos un parametro!) desaparece el constructor por defecto, ergo tengo que crearlo manualmente.
-     * 
+     *
+     * Sobrecarga de casteo (explicito e implicito)
+     * implícito cuando no hay pérdida de información (de int a double)
+     * siempre static
     */
 
     // este método llama a la sobrecarga y le pasa el string. 

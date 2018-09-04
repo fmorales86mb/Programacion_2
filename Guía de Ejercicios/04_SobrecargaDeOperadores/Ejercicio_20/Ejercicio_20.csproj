@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BibliotecaSobrecarga\BibliotecaSobrecarga.csproj">
+      <Project>{e50ebfcf-0dbd-427b-97c2-fc78d3cbcb60}</Project>
+      <Name>BibliotecaSobrecarga</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
