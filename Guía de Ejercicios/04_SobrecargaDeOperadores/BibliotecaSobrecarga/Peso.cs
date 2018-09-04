@@ -37,7 +37,7 @@ namespace BibliotecaSobrecarga
 
         public static explicit operator Peso(Euro e)
         {
-            return new Peso( ((Dolar)e).GetCantidad() / Peso.GetCotizacion() );
+      return ((Dolar)e).GetCantidad() / Peso.GetCotizacion();
         }
 
         public static explicit operator Peso (Dolar d)
@@ -92,12 +92,12 @@ namespace BibliotecaSobrecarga
 
         public static bool operator ==(Peso p, Euro e)
         {
-            return p == (Euro)e;
+            return p == (Peso)e;
         }
 
         public static bool operator !=(Peso p, Euro e)
         {
-            return p != (Euro)e;
+            return p != (Peso)e;
         }        
     }
 }
