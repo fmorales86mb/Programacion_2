@@ -36,6 +36,8 @@ namespace Ejercicio_20
           ((Dolar)peso).GetCantidad().ToString());
       Console.WriteLine(equiPeso);
 
+
+
       // Comparaciones
       if (dolar == euro) Console.WriteLine("dolar igual euro");
       else Console.WriteLine("dolar distinto euro");
@@ -71,10 +73,15 @@ namespace Ejercicio_20
       Console.WriteLine("euro + dolar = {0}", (euro + dolar).GetCantidad().ToString());
       Console.WriteLine("peso + euro = {0}", (peso + euro).GetCantidad().ToString());
       Console.WriteLine("peso + dolar = {0}", (peso + dolar).GetCantidad().ToString());
-      
-
 
       // Resta
+
+      Console.WriteLine("dolar - peso = {0}", (dolar - peso).GetCantidad().ToString());
+      Console.WriteLine("dolar - euro = {0}", (dolar - euro).GetCantidad().ToString());
+      Console.WriteLine("euro - peso = {0}", (euro - peso).GetCantidad().ToString());
+      Console.WriteLine("euro - dolar = {0}", (euro - dolar).GetCantidad().ToString());
+      Console.WriteLine("peso - euro = {0}", (peso - euro).GetCantidad().ToString());
+      Console.WriteLine("peso - dolar = {0}", (peso - dolar).GetCantidad().ToString());
 
       Console.ReadKey();
     }
