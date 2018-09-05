@@ -65,7 +65,9 @@ namespace Repaso
 
     public static bool operator !=(Producto p, string marca)
     {
-      return (p.GetMarca() != marca);
+      return !(p == marca);
+
+      //return (p.GetMarca() != marca);
     }
 
     public static bool operator ==(Producto p, Producto p2)
@@ -83,7 +85,8 @@ namespace Repaso
 
     public static bool operator !=(Producto p, Producto p2)
     {
-      return (p.GetMarca() != p2.GetMarca() || (string)p != (string)p2);
+      return !(p == p2);
+      //return (p.GetMarca() != p2.GetMarca() || (string)p != (string)p2);
     }
 
   }

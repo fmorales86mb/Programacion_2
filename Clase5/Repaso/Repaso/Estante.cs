@@ -60,18 +60,20 @@ namespace Repaso
     // True si p no está en el estante. False si está p en el estante.
     public static bool operator !=(Estante e, Producto p)
     {
-      bool noExiste = true;
+      return !(e == p); // reutilizar código.
 
-      for (int i = 0; i < e.GetProductos().Length; i++)
-      {
-        if (e.GetProductos()[i] == p)
-        {
-          noExiste = false;
-          break;
-        }
-      }
+      //bool noExiste = true;
 
-      return noExiste;
+      //for (int i = 0; i < e.GetProductos().Length; i++)
+      //{
+      //  if (e.GetProductos()[i] == p)
+      //  {
+      //    noExiste = false;
+      //    break;
+      //  }
+      //}
+
+      //return noExiste;
     }
 
     /// <summary>
