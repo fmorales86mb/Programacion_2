@@ -20,21 +20,28 @@ namespace BibliotecaSobrecarga
             return this.grados;
         }
 
-        public static double GetCelcius(double grados)
-        {
-            return (grados - 32) * 5 / 9;
-        }
+        //public static double GetCelcius(double grados)
+        //{
+        //    return (grados - 32) * 5 / 9;
+        //}
 
         public static implicit operator Kelvin(double grados)
         {
             return new Kelvin(grados);
         }
 
-        public static explicit operator Kelvin(Celsius c)
+        public static explicit operator Kelvin(Fahrenheit f)
         {
-            return 
+            double grados = (f.GetGrados() + 459.67) * 5 / 9;
+            return new Kelvin(grados);
         }
 
+        public static explicit operator Kelvin(Celsius c)
+        {
+            return ((Kelvin)((Fahrenheit)c));
+        }
+
+        
         
 
 

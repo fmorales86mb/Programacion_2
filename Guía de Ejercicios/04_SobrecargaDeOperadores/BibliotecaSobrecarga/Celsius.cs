@@ -17,6 +17,17 @@ namespace BibliotecaSobrecarga
 
         public double GetGrados() { return this.grados; }
         
+        public static explicit operator Celsius(Fahrenheit f)
+        {
+            double grados = (f.GetGrados() - 32) * 5 / 9;
+            return new Celsius(grados);
+        }
+
+        public static explicit operator Celsius(Kelvin k)
+        {
+            return ((Celsius)((Fahrenheit)k)); // chequear
+        }
+
 
     }
 }
