@@ -11,6 +11,8 @@ namespace Ejercicio_13
     {
         static void Main(string[] args)
         {
+            Console.Title = "Ejercicio_13";
+
             string nroBin = "10100001";
             double nroDec = 21;
 
