@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversor", "Conversor\Conversor.csproj", "{9E1C9183-9FCF-4655-A8E9-A305AA8E7E2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnitudesTermicas", "..\MagnitudesTermicas\MagnitudesTermicas\MagnitudesTermicas.csproj", "{46A14F55-5F28-4BF3-B938-CC9E759EA4CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E1C9183-9FCF-4655-A8E9-A305AA8E7E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E1C9183-9FCF-4655-A8E9-A305AA8E7E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E1C9183-9FCF-4655-A8E9-A305AA8E7E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E1C9183-9FCF-4655-A8E9-A305AA8E7E2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46A14F55-5F28-4BF3-B938-CC9E759EA4CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46A14F55-5F28-4BF3-B938-CC9E759EA4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46A14F55-5F28-4BF3-B938-CC9E759EA4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46A14F55-5F28-4BF3-B938-CC9E759EA4CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C28E333E-AB3A-4E26-AC40-ABE2718CC01D}
+	EndGlobalSection
+EndGlobal
