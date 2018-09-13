@@ -8,20 +8,27 @@ namespace BibliotecaMetodosEstaticos
 {
     public class Conversor
     {
+        /* 
+         * Falta pulir el código.
+         * Se pueden extraer varios métodos privados.
+         */
+
         /// <summary>
-        /// Convierte un número decimal positivo a su equivalente binario.
+        /// Convierte un número decimal a su equivalente binario.
         /// </summary>
         /// <param name="valor">Decimal a convertir.</param>
         /// <returns>Binario en formato string.</returns>
         public static string DecimalBinario(double valor)
         {
             string nroBinario = string.Empty;
+            bool esNegativo = valor < 0;
+            valor *= -1;
             double nroAux;
             int enteroAux;
             int valEntero = (int)valor;
             double valFrac = valor - valEntero;
 
-            // Parte entera.
+            // Parte entera.  
             if (valEntero == 0) nroBinario = "0";
             else
             {
@@ -49,21 +56,23 @@ namespace BibliotecaMetodosEstaticos
                 }
             }
 
+            if (esNegativo) nroBinario = "-" + nroBinario;
             return nroBinario;
         }
 
         /// <summary>
-        /// Convierte un número binario positivo a decimal.
+        /// Convierte un número binario a decimal.
         /// </summary>
-        /// <param name="valor">String con el valor.</param>
+        /// <param name="valor">String con el valor sin espacios y con '.' preparando parte fraccional de entera.</param>
         /// <returns>Decimal equivalente.</returns>
         public static double BinarioDecimal(string valor)
         {
             int acumuladorEntero = 0;
+            bool esNegativo = valor.StartsWith("-");
             double acumuladorFraccional = 0;
             int nro;
             int factorProducto;
-            int j;
+            int j;        
 
             string[] enteroFraccional = valor.Split('.');
             j = enteroFraccional[0].Length - 1;
@@ -78,12 +87,7 @@ namespace BibliotecaMetodosEstaticos
                 if (int.TryParse((enteroFraccional[0][j]).ToString(), out nro))
                 {
                     acumuladorEntero += nro * factorProducto;
-                }
-                else
-                {
-                    acumuladorEntero = 0;
-                    break;
-                }                
+                }              
             }
             
             // Parte Fraccional.
@@ -102,7 +106,7 @@ namespace BibliotecaMetodosEstaticos
                 }
             }
 
-                return acumuladorEntero + acumuladorFraccional;
+            return esNegativo ? (acumuladorEntero + acumuladorFraccional) * (-1) : acumuladorEntero + acumuladorFraccional;
         }
     }
 }

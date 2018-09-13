@@ -13,8 +13,8 @@ namespace Ejercicio_13
         {
             Console.Title = "Ejercicio_13";
 
-            string nroBin = "1100.11";
-            double nroDec = 42.375;
+            string nroBin = "-1100.11";
+            double nroDec = -42.375;
 
             Console.WriteLine(string.Format("{0} (2) -> {1} (10)", 
                 nroBin, (Conversor.BinarioDecimal(nroBin)).ToString()));
