@@ -9,56 +9,100 @@ namespace BibliotecaMetodosEstaticos
     public class Conversor
     {
         /// <summary>
-        /// 
+        /// Convierte un número decimal positivo a su equivalente binario.
         /// </summary>
-        /// <param name="valor"></param>
-        /// <returns></returns>
+        /// <param name="valor">Decimal a convertir.</param>
+        /// <returns>Binario en formato string.</returns>
         public static string DecimalBinario(double valor)
         {
             string nroBinario = string.Empty;
-            
-            do
-            {
-                if (valor % 2 == 0) nroBinario += '0';
-                else nroBinario += '1';
+            double nroAux;
+            int enteroAux;
+            int valEntero = (int)valor;
+            double valFrac = valor - valEntero;
 
-                valor = (int)(valor / 2); // tomo la parte entera
-                
-            } while (valor >= 2);
+            // Parte entera.
+            if (valEntero == 0) nroBinario = "0";
+            else
+            {
+                while (valEntero > 0)
+                {
+                    if (valEntero % 2 == 0) nroBinario = "0" + nroBinario; //ingreso los nros como pila.
+                    else nroBinario = "1" + nroBinario;
+                    valEntero = (int)(valEntero / 2); // tomo la parte entera                
+                }
+            }
+
+            // Parte fraccional
+            nroBinario += ","; // ingreso como cola
+
+            if (valFrac == 0) nroBinario += "000";
+            else
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    nroAux = valFrac * 2;
+                    enteroAux = (int)nroAux;
+                    valFrac = nroAux - enteroAux;
+
+                    nroBinario += enteroAux.ToString();
+                }
+            }
 
             return nroBinario;
         }
 
         /// <summary>
-        /// 
+        /// Convierte un número binario positivo a decimal.
         /// </summary>
-        /// <param name="valor"></param>
-        /// <returns></returns>
+        /// <param name="valor">String con el valor.</param>
+        /// <returns>Decimal equivalente.</returns>
         public static double BinarioDecimal(string valor)
         {
-            double acumulador = 0;            
+            int acumuladorEntero = 0;
+            double acumuladorFraccional = 0;
             int nro;
-            double factorProducto;
-            int j = valor.Length -1;
+            int factorProducto;
+            int j;
 
-            for(int i = 0; i<valor.Length; i++, j--)
+            string[] enteroFraccional = valor.Split('.');
+            j = enteroFraccional[0].Length - 1;
+
+            // Parte entera.
+            for (int i = 0; i<enteroFraccional[0].Length; i++, j--)
             {
                 // voy de derecha a izquierda. El factor arranca en 1 con i = 0
-                factorProducto = Math.Pow(2, i); 
-
+                factorProducto = (int)Math.Pow(2, i); 
+                
                 // La toma de dígitos es de derecha a izquierda. con j igual al último índice del string.
-                if (int.TryParse(valor[j].ToString(), out nro))
+                if (int.TryParse((enteroFraccional[0][j]).ToString(), out nro))
                 {
-                    acumulador += nro * factorProducto;
+                    acumuladorEntero += nro * factorProducto;
                 }
                 else
                 {
-                    acumulador = 0;
+                    acumuladorEntero = 0;
+                    break;
+                }                
+            }
+            
+            // Parte Fraccional.
+            for (int i = 0; i < enteroFraccional[1].Length; i++)
+            {
+                factorProducto = (int)Math.Pow(2, i+1);
+
+                if (int.TryParse(enteroFraccional[1][i].ToString(), out nro))
+                {
+                    acumuladorFraccional += (double)nro / factorProducto;
+                }
+                else
+                {
+                    acumuladorFraccional = 0;
                     break;
                 }
             }
 
-            return acumulador;
+                return acumuladorEntero + acumuladorFraccional;
         }
     }
 }
