@@ -8,57 +8,107 @@ namespace BibliotecaSobrecarga
 {
     public class Conversor
     {
+        /* 
+         * Falta pulir el código.
+         * Se pueden extraer varios métodos privados.
+         */
+
         /// <summary>
-        /// 
+        /// Convierte un número decimal a su equivalente binario.
         /// </summary>
-        /// <param name="valor"></param>
-        /// <returns></returns>
+        /// <param name="valor">Decimal a convertir.</param>
+        /// <returns>Binario en formato string.</returns>
         public static string DecimalBinario(double valor)
         {
             string nroBinario = string.Empty;
-            
-            do
+            bool esNegativo = valor < 0;
+            if (esNegativo) valor *= -1;
+            double nroAux;
+            int enteroAux;
+            int valEntero = (int)valor;
+            double valFrac = valor - valEntero;
+
+            // Parte entera.  
+            if (valEntero == 0) nroBinario = "0";
+            else
             {
-                if (valor % 2 == 0) nroBinario += '0';
-                else nroBinario += '1';
+                while (valEntero > 0)
+                {
+                    if (valEntero % 2 == 0) nroBinario = "0" + nroBinario; //ingreso los nros como pila.
+                    else nroBinario = "1" + nroBinario;
+                    valEntero = (int)(valEntero / 2); // tomo la parte entera                
+                }
+            }
 
-                valor = (int)(valor / 2); // tomo la parte entera
-                
-            } while (valor >= 2);
+            // Parte fraccional            
+            if (valFrac!=0)
+            {
+                nroBinario += ","; // ingreso como cola
 
+                for (int i = 0; i < 3; i++)
+                {
+                    nroAux = valFrac * 2;
+                    enteroAux = (int)nroAux;
+                    valFrac = nroAux - enteroAux;
+
+                    nroBinario += enteroAux.ToString();
+                }
+            }
+
+            if (esNegativo) nroBinario = "-" + nroBinario;
             return nroBinario;
         }
 
         /// <summary>
-        /// 
+        /// Convierte un número binario a decimal.
         /// </summary>
-        /// <param name="valor"></param>
-        /// <returns></returns>
+        /// <param name="valor">String con el valor sin espacios y con '.' preparando parte fraccional de entera.</param>
+        /// <returns>Decimal equivalente.</returns>
         public static double BinarioDecimal(string valor)
         {
-            double acumulador = 0;            
+            int acumuladorEntero = 0;
+            bool esNegativo = valor.StartsWith("-");
+            double acumuladorFraccional = 0;
             int nro;
-            double factorProducto;
-            int j = valor.Length -1;
+            int factorProducto;
+            int j;        
 
-            for(int i = 0; i<valor.Length; i++, j--)
+            string[] enteroFraccional = valor.Split('.');
+            j = enteroFraccional[0].Length - 1;
+
+            // Parte entera.
+            for (int i = 0; i<enteroFraccional[0].Length; i++, j--)
             {
                 // voy de derecha a izquierda. El factor arranca en 1 con i = 0
-                factorProducto = Math.Pow(2, i); 
-
+                factorProducto = (int)Math.Pow(2, i); 
+                
                 // La toma de dígitos es de derecha a izquierda. con j igual al último índice del string.
-                if (int.TryParse(valor[j].ToString(), out nro))
+                if (int.TryParse((enteroFraccional[0][j]).ToString(), out nro))
                 {
-                    acumulador += nro * factorProducto;
-                }
-                else
+                    acumuladorEntero += nro * factorProducto;
+                }              
+            }
+            
+            // Parte Fraccional.
+            if (enteroFraccional.GetLength(0)==2) //Chequeo que exista el índice 1.
+            {
+                for (int i = 0; i < enteroFraccional[1].Length; i++)
                 {
-                    acumulador = 0;
-                    break;
+                    factorProducto = (int)Math.Pow(2, i + 1);
+
+                    if (int.TryParse(enteroFraccional[1][i].ToString(), out nro))
+                    {
+                        acumuladorFraccional += (double)nro / factorProducto;
+                    }
+                    else
+                    {
+                        acumuladorFraccional = 0;
+                        break;
+                    }
                 }
             }
-
-            return acumulador;
+            
+            return esNegativo ? (acumuladorEntero + acumuladorFraccional) * (-1) : acumuladorEntero + acumuladorFraccional;
         }
     }
 }

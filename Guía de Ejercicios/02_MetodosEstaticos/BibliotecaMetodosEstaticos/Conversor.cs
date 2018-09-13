@@ -22,7 +22,7 @@ namespace BibliotecaMetodosEstaticos
         {
             string nroBinario = string.Empty;
             bool esNegativo = valor < 0;
-            valor *= -1;
+            if (esNegativo) valor *= -1;
             double nroAux;
             int enteroAux;
             int valEntero = (int)valor;
@@ -40,12 +40,11 @@ namespace BibliotecaMetodosEstaticos
                 }
             }
 
-            // Parte fraccional
-            nroBinario += ","; // ingreso como cola
-
-            if (valFrac == 0) nroBinario += "000";
-            else
+            // Parte fraccional            
+            if (valFrac!=0)
             {
+                nroBinario += ","; // ingreso como cola
+
                 for (int i = 0; i < 3; i++)
                 {
                     nroAux = valFrac * 2;
@@ -91,21 +90,24 @@ namespace BibliotecaMetodosEstaticos
             }
             
             // Parte Fraccional.
-            for (int i = 0; i < enteroFraccional[1].Length; i++)
+            if (enteroFraccional.GetLength(0)==2) //Chequeo que exista el índice 1.
             {
-                factorProducto = (int)Math.Pow(2, i+1);
+                for (int i = 0; i < enteroFraccional[1].Length; i++)
+                {
+                    factorProducto = (int)Math.Pow(2, i + 1);
 
-                if (int.TryParse(enteroFraccional[1][i].ToString(), out nro))
-                {
-                    acumuladorFraccional += (double)nro / factorProducto;
-                }
-                else
-                {
-                    acumuladorFraccional = 0;
-                    break;
+                    if (int.TryParse(enteroFraccional[1][i].ToString(), out nro))
+                    {
+                        acumuladorFraccional += (double)nro / factorProducto;
+                    }
+                    else
+                    {
+                        acumuladorFraccional = 0;
+                        break;
+                    }
                 }
             }
-
+            
             return esNegativo ? (acumuladorEntero + acumuladorFraccional) * (-1) : acumuladorEntero + acumuladorFraccional;
         }
     }
