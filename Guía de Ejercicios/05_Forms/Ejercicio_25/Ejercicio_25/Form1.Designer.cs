@@ -86,6 +86,7 @@
             this.txtDecimal.Name = "txtDecimal";
             this.txtDecimal.Size = new System.Drawing.Size(100, 20);
             this.txtDecimal.TabIndex = 6;
+            this.txtDecimal.Tag = "";
             // 
             // lblDecimalBinario
             // 

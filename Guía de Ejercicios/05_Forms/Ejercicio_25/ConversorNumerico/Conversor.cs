@@ -45,7 +45,7 @@ namespace ConversorNumerico
             {
                 nroBinario += ","; // ingreso como cola
 
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 5; i++)
                 {
                     nroAux = valFrac * 2;
                     enteroAux = (int)nroAux;
@@ -53,6 +53,7 @@ namespace ConversorNumerico
 
                     nroBinario += enteroAux.ToString();
                 }
+                nroBinario = nroBinario.TrimEnd('0'); //quito los ceros sobrantes
             }
 
             if (esNegativo) nroBinario = "-" + nroBinario;
