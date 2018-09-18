@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_ArraysYColecciones", "07_ArraysYColecciones\07_ArraysYColecciones.csproj", "{82E9847E-7ECE-4343-BB44-D731F18509E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_28", "07_ArraysYColecciones\Ejercicio_28.csproj", "{82E9847E-7ECE-4343-BB44-D731F18509E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_26", "Ejercicio_26\Ejercicio_26.csproj", "{A225A27A-9682-4DC9-9258-815F2BCFA1AC}"
 EndProject
