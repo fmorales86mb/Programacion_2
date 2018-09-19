@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+//using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BiblioColecciones;
@@ -9,6 +9,10 @@ namespace Ejercicio_27
 {
     class Program
     {
+        /*
+         * No se pueden ordenar ni colas, ni pilas ni diccionarios. Se resuelve pasandolos a arrays 
+         * y luego ordenándolos. 
+         */
         static void Main(string[] args)
         {
             Console.Title = "Ejercicio 27";
@@ -69,6 +73,11 @@ namespace Ejercicio_27
                 aux = aux * (rand.NextDouble() > 0.5 ? 1 : -1);
                 pila.Push(aux); // asigna valor o agrega objeto? en este caso es el mismo objeto.
             }
+
+
+            int[] copiaPila = pila.ToArray();
+            int[] copiaCola = cola.ToArray();
+            
 
             // Muestro el vector 
             Console.WriteLine("Muestro la Pila:");
