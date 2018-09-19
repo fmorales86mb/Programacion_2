@@ -1,0 +1,20 @@
+HERENCIA
+
+dos tipos de herencia
+c# solo soporta herencia simple.
+en c++ existe la herencia múltiple.
+en c# todas las clases heredan de alguna clase, explicita o implìcitamente, y heredan de object.
+
+una clase derivada hereda todo de la base exepto los constructores.
+los constructores nunca se heredan.
+
+una clase derivada no puede ser más accesible que una clase base.
+
+protected se ve como publico en clases derivadas, no importa el nivel de herencia.
+
+para acceder a la clase base no se usa this sino "base"!!
+
+
+CLASES SELLADAS
+
+prohibe la herencia. (sealed)
