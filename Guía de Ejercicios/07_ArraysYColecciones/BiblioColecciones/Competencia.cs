@@ -37,6 +37,17 @@ namespace BiblioColecciones
             return sb.ToString();
         }
 
+        // parche, ver qué hace
+        private static readonly Random random = new Random();
+        private static readonly object syncLock = new object();
+        public static short RandomNumber(int min, int max)
+        {
+            lock (syncLock)
+            { // synchronize
+                return (short)random.Next(min, max);
+            }
+        }
+
         public static bool operator +(Competencia c, AutoF1 a)
         {
             bool agregado = false;
@@ -44,8 +55,8 @@ namespace BiblioColecciones
             
             if (c != a && c.competidores.Count < c.cantidadCompetidores)
             {
-                short aux = (short)rand.Next(15, 100);
-                
+                // short aux = (short)rand.Next(15, 100);
+                short aux = RandomNumber(15, 100);
                 // consultar, acá esta el error.
                 a.CantidadCombustible = aux;
                 a.VueltasRestantes = c.cantidadVueltas;
