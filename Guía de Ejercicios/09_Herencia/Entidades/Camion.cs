@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Camion : VehiculoTerrestre
+    public class Camion : VehiculoTerrestre
     {
         //private short cantidadRuedas;
         //private short cantidadPuertas;
