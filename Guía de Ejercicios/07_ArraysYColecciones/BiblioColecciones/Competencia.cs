@@ -28,41 +28,65 @@ namespace BiblioColecciones
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("Cantidad de Competidores: " + this.cantidadCompetidores.ToString());
             sb.AppendLine("Cantidad de Vueltas: " + this.cantidadVueltas.ToString());
-            sb.AppendLine("Competidores: \n");
+            sb.AppendLine("Competidores: \n");                      
             foreach (AutoF1 auto in this.competidores)
             {
                 sb.AppendLine(auto.MostrarDatos());
-            }
+            }           
             sb.AppendLine();
             return sb.ToString();
         }
 
         public static bool operator +(Competencia c, AutoF1 a)
         {
-            bool agregado = true;
-            for(int i = 0; i < c.competidores.Count; i++)
+            bool agregado = false;
+            Random rand = new Random();
+            
+            if (c != a && c.competidores.Count < c.cantidadCompetidores)
             {
-                if(c.competidores[i] == a || c.competidores.Count < c.cantidadCompetidores)
-                {
-                    agregado = false;
-                    break;
-                }
-            }
-            if (agregado)
+                short aux = (short)rand.Next(15, 100);
+                
+                // consultar, acá esta el error.
+                a.CantidadCombustible = aux;
+                a.VueltasRestantes = c.cantidadVueltas;
+                a.EnCompetencia = true;
                 c.competidores.Add(a);
+                //c.competidores.Last().EnCompetencia = true;
+                //c.competidores.Last().VueltasRestantes = c.cantidadVueltas;
+                //c.competidores.Last().CantidadCombustible = aux;
+                aux = 0;
+                rand = null;
+                agregado = true;
+            }
 
             return agregado;
         }
 
         public static bool operator -(Competencia c, AutoF1 a)
         {
-
+            bool removido = false;
+            if(c==a)
+            {
+                c.competidores.Remove(a);
+                removido = true;
+            }
+            return removido;
         }
 
         public static bool operator ==(Competencia c, AutoF1 a)
         {
+            bool yaExiste = false;
+            foreach (AutoF1 auto in c.competidores)
+            {
+                if (auto == a) yaExiste = true;
+            }
 
+            return yaExiste;
         }
 
+        public static bool operator !=(Competencia c, AutoF1 a)
+        {            
+            return !(c==a);
+        }
     }
 }
