@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Libro
+    public class Libro
     {
         private List<string> paginas;
+
+        public Libro()
+        {
+            this.paginas = new List<string>();
+        }
 
         public string this[int i]
         {
@@ -20,7 +25,15 @@ namespace Entidades
 
                 return pagina;                
             }
-            set { }
+            set
+            {
+                if (this.paginas.Count <= i)
+                    this.paginas.Add(value);
+                else
+                    this.paginas[i] = value;
+                
+                    //this.paginas[i] = value;
+            }
         }
             
 
