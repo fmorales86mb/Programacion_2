@@ -12,7 +12,8 @@ namespace Ejercicio_34
         static void Main(string[] args)
         {
             Automovil auto = new Automovil(4, 4, 5, 5, Colores.Blanco);
-            string datosAuto = string.Format("Puertas ={0}")
+            //string datosAuto = string.Format("Puertas ={0}\nRuedas={1}\nMarchas={2}\nPasajeros={3}\nColor={4}"
+            //    )
 
             Moto moto = new Moto(2, 0, Colores.Rojo, 2);
             Camion camion = new Camion(10, 2, 5, 10000, Colores.Azul);
