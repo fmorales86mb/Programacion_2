@@ -1,0 +1,32 @@
+abstract 
+ no se puede sellar la clase
+ las clases derivadas están obligadas a implemetar las clases abstractas del padre
+ le dan un marco a las clases hijas
+ si b es abstracta y hereda de a abstracata, no necesita implementar, ya que b es abstracta. si c hereda de b, sí necesita implementtar
+ el metodo de a abstracto. porque c no es abstract. ver ppt
+ se implementa con override.
+ declarar un metodo abstracto solo se puede en una clase abstracta!!!
+ no se pueden implemmentar las clases abstractas.
+
+ Virtual
+ se pueden implementar en la clase que se define
+ no es necesario implementarlo en la clase hija
+ 
+ Override
+ override solo para metodos abstractos o virtual u overrride
+ se tiene que respetar la firma!!
+ virtuales en tiempo de ejecucion, ver!
+
+ Polimorfismo
+ relacionado con virtual
+ es un concepto, 
+ si una clase derivada hereda un métdodo virutal y lo sobreeescribe, al ejecutarse se 
+
+ transporte t1 = new auto();
+ transporte t2 = new caballo ();
+ transporte t2 = new cohete();
+
+ t1.frenar(); // llama al frenar de auto ya que es virtual. y auto tiene el override del metodo virtual.
+
+ La ventaja serìa que utilizo objetos transporte con distintas posibles funcionalidades en tiempo de ejcucion.
+ puedo poner los transportes en una lista. 
