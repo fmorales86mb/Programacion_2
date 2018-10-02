@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BiblioColecciones
 {
-    class Jugador
+    public class Jugador
     {
-        private long dni;
+        private int dni;
         private string nombre;
         private int partidosJugados;
         private float promedioGoles;
@@ -24,16 +24,16 @@ namespace BiblioColecciones
         {
             this.partidosJugados = 0;
             this.totalGoles = 0;
-        }
-
-        public Jugador(long dni, string nombre) : this()
-        {
-            this.dni = dni;
-            this.nombre = nombre;
             this.promedioGoles = 0;
         }
 
-        public Jugador(long dni, string nombre, int partidosJugados, int totalGoles):this(dni, nombre)
+        public Jugador(int dni, string nombre) : this()
+        {
+            this.dni = dni;
+            this.nombre = nombre;            
+        }
+
+        public Jugador(int dni, string nombre, int partidosJugados, int totalGoles):this(dni, nombre)
         {
             this.partidosJugados = partidosJugados;
             this.totalGoles = totalGoles;
@@ -46,9 +46,19 @@ namespace BiblioColecciones
             sb.AppendLine("DNI: " + this.dni.ToString());
             sb.AppendLine("Partidos Jugados: " + this.partidosJugados.ToString());
             sb.AppendLine("Goles totales: " + this.totalGoles.ToString());
-            sb.AppendLine("Promedio de gol: " + this.GetPromedioGoles().ToString());
+            sb.AppendLine("Promedio de gol: " + (Math.Round((double)this.GetPromedioGoles(),2)).ToString());
             sb.AppendLine();
             return sb.ToString();
+        }
+
+        public static bool operator ==(Jugador jugador1, Jugador jugador2)
+        {
+            return jugador1.dni == jugador2.dni;
+        }
+
+        public static bool operator !=(Jugador jugador1, Jugador jugador2)
+        {
+            return !(jugador1 == jugador2);
         }
     }
 }

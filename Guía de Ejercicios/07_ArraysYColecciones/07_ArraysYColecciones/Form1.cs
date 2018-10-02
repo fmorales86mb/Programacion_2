@@ -20,8 +20,14 @@ namespace _07_ArraysYColecciones
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            
-            
+            Dictionary<string, int> diccionario = LevantarPalabras(rtxtDiccionario.Text);
+            diccionario = OrdenarDiccionario(diccionario);
+            List<string> keys = diccionario.Keys.ToList();
+
+            string mensaje = string.Format("1º '{0}' con {1} apariciones. \n2º '{2}' con {3} apariciones. \n3º '{4}' con {5} apariciones.", keys[0], diccionario[keys[0]],
+                keys[1], diccionario[keys[1]], keys[2], diccionario[keys[2]]);
+
+            MessageBox.Show(mensaje, "Top 3");
         }
 
         private Dictionary<string, int> LevantarPalabras(string texto)
@@ -40,8 +46,35 @@ namespace _07_ArraysYColecciones
 
         private Dictionary<string, int> OrdenarDiccionario(Dictionary<string, int> diccionario)
         {
-            Dictionary<string, int>.KeyCollection keys = diccionario.Keys;
-            
+            List<int> listaValues = diccionario.Values.ToList();
+            List<string> listaKeys = diccionario.Keys.ToList();
+            Dictionary<string, int> SortDicc = new Dictionary<string, int>();
+            int valueAux;
+            string keyAux;
+
+            for(int i = 0; i<listaValues.Count - 1; i++)
+            {
+                for(int j=i+1; j<listaValues.Count; j++)
+                {
+                    if (listaValues[i]<listaValues[j])
+                    {
+                        valueAux = listaValues[i];
+                        listaValues[i] = listaValues[j];
+                        listaValues[j] = valueAux;
+
+                        keyAux = listaKeys[i];
+                        listaKeys[i] = listaKeys[j];
+                        listaKeys[j] = keyAux;
+                    }
+                }
+            }
+
+            for (int i = 0; i<listaKeys.Count; i++)
+            {
+                SortDicc.Add(listaKeys[i], listaValues[i]);
+            }
+
+            return SortDicc;
         }
     }
 }

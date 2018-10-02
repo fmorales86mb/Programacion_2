@@ -41,6 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Equipo.cs" />
+    <Compile Include="Jugador.cs" />
+>>>>>>> f9c94308b2be3dff2884785cbe86af1e687b2662
     <Compile Include="Libro.cs" />
     <Compile Include="Negocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

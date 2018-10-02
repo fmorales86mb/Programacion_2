@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoF1.cs" />
+    <Compile Include="Competencia.cs" />
+    <Compile Include="Equipo.cs" />
+    <Compile Include="Jugador.cs" />
     <Compile Include="Ordenado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
