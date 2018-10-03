@@ -23,7 +23,7 @@ namespace Entidades
 
         private Curso()
         {
-            alumnos = new List<Alumno>();
+            this.alumnos = new List<Alumno>();
         }
         public Curso(short anio, Divisiones division, Profesor profesor): this()
         {
