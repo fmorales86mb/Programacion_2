@@ -27,8 +27,7 @@ namespace Entidades
             {
                 return this.apellido;
             }
-        }
-        // valida el documento según corresponda, ver.
+        }       
         public string Documento
         {
             get
@@ -37,7 +36,8 @@ namespace Entidades
             }
             set
             {
-                this.documento = value;
+                if(ValidarDocumentacion(value))
+                    this.documento = value;
             }
         }
         public string Nombre

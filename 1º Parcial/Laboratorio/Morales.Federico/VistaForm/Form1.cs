@@ -11,24 +11,69 @@ using Entidades;
 
 namespace VistaForm
 {
-    public partial class Form1 : Form
+    public partial class frmVistaCurso : Form
     {
-        private Curso curso;
+        private Curso Curso;
 
-        public Form1()
+        public frmVistaCurso()
         {
             InitializeComponent();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            Divisiones division;
+            Enum.TryParse<Divisiones>(cbAlumnoDivisiones.SelectedValue.ToString(), out division);
+
+            Profesor profesor = new Profesor(
+                txtProfesorNombre.Text,
+                txtProfesorApellido.Text,
+                txtProfesorDni.Text,
+                dateProfesorIngreso.Value);
+            
+            Curso = new Curso(
+                (short)numCursoAnio.Value,
+                //(Divisiones)cbCusroDivisiones.SelectedItem,
+                division,
+                profesor);
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            if (object.ReferenceEquals(Curso, null))
+            {
+                MessageBox.Show("No existe Curso para mostrar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                rtxtCurso.Text = (string)Curso;
+            }
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Profesor profesor = new Profesor(txtNombre.Text, txtApellido.Text, txtDni.Text);
-            curso = new Curso((short)numericUpDown1.Value, )
+            if(!(object.ReferenceEquals(Curso, null)))
+            {
+                Divisiones division; 
+                Enum.TryParse<Divisiones>(cbAlumnoDivisiones.SelectedValue.ToString(), out division);
+
+                Alumno alumno = new Alumno(
+                    txtAlumnoNombre.Text,
+                    txtAlumnoApellido.Text,
+                    txtAlumnoLegajo.Text,
+                    (short)numAlumnoAnio.Value,
+                    division);
+                    //(Divisiones)cbAlumnoDivisiones.SelectedItem);
+
+                Curso = Curso + alumno;
+            }
+        }
+
+        private void frmVistaCurso_Load(object sender, EventArgs e)
+        {
+            cbCusroDivisiones.DataSource = Enum.GetValues(typeof(Divisiones));
+            cbAlumnoDivisiones.DataSource = Enum.GetValues(typeof(Divisiones));
         }
     }
 }
