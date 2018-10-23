@@ -1,0 +1,10 @@
+Ejercicios
+Dado el siguiente Main [DESCARGAR]:
+Utilizar Generics y Arrays construir la clase MiLista que imitará el comportamiento de List. Se deberán crear los métodos:
+
+Add: agregá un ítem al array.
+Remove: eliminará el primer elemento igual que encuentre.
+Count: propiedad que retornará la cantidad ítems del array.
+Implementar IEnumerable para poder recorrerla con, por ejemplo, foreach.
+
+NOTA: se deberá redimensionar el array con Array.Resize tanto en el método Add como en el Remove.
