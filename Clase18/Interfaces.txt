@@ -1,0 +1,14 @@
+Interfaces, especie de contrato
+por EJ:
+el foreach recibe algo del tipo de una inteerface Ienumerable, no una clase?
+
+no tienen implementación
+no tienen visibilidad, todo es publico
+no se pueden declarar constructores ni atributos
+
+se estableces cienrtas pautas.
+una clase puee implementar muchas interfaces pero solo heredar una clase.
+
+el foreach recibe algo del tipo de una inteerface Ienumerable, no una clase?
+
+

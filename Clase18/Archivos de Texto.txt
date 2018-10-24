@@ -1,0 +1,34 @@
+ppt
+
+streams read y writer
+
+constructores:
+
+path la dir del archivo
+append es un booleano que indica si creo uno nuevo o agrego.
+
+metodos
+write 
+write line
+cloese // fundamental que se cierre porque sino queda tomado.
+en el finaly del catch se utiliza.
+
+con el using se evita poner el close. 
+
+reader
+path y path y encoding
+close
+
+read - caracter a caracter
+read -  line hasta el salto de linea
+read - to end todo el archivo
+
+bajar ppt del git de fede
+
+file.existe
+file.copy
+file.delete
+
+special folders : para acceder a carpetas sin importarnos la direccion.
+
+
