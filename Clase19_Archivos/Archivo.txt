@@ -1,0 +1,49 @@
+Serialización:
+
+guarda objetos en archivos. XML se usa en web por ej.
+
+------------
+
+XML
+
+-solo atributos y propiedades públicas
+<xml>
+	// Objeto
+	<persona >
+		// propiedad publica del obj
+		<nombre type="string">
+			minombre // valor
+		</nombre> 
+	</persona>
+</xml>
+
+xmlWriter ( archivo, codificacion) // es la configuarcion que usa el serializer
+creamos un xmlSerializer( tipo de obj) // constuctor
+.serialize(ruta, objeto) // serializa (ver) 
+
+-la clase tiene que tener un constructor sin parámetros (por defecto), ya sea el generado 
+por defecto o en tal caso generar uno sin parametros
+- si hay relacion de herencia hay que poner xxxxxxx
+
+-para desserializar 
+text reader
+objeto (no es necesario hacerle el new) // a este objeto le voy a a asignar los datos.
+serializador // asigno los datos al objeto
+cerrar reader
+
+---------------
+
+binaria
+
+-Se usan marcadores en la clase que quiero que se pueda serializar //[serializable]
+-similar al xml, misma lógica/metodología
+-Binario guarda privados!!
+
+obj
+fileStream
+binaryFormater
+
+
+
+---------------
+luego se reconstruye
