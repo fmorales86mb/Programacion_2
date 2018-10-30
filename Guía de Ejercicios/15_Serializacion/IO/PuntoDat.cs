@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace IO
 {
+    [Serializable]
     class PuntoDat : Archivo, IArchivos<PuntoDat>
     {
         private string contenido;
@@ -26,20 +28,38 @@ namespace IO
         protected override bool ValidarArchivo(string ruta)
         {
             if (base.ValidarArchivo(ruta))
-                if (Path.GetExtension(ruta) == ".dat") ;
-                    //throw 
+                if (Path.GetExtension(ruta) == ".dat") 
+                    throw new ArchivoIncorrectoException("El archivo no es un dat.");
 
             return true;
         }
 
         bool IArchivos<PuntoDat>.Guardar(string ruta, PuntoDat obj)
         {
-            throw new NotImplementedException();
+            FileStream fs;
+            BinaryFormatter ser;
+
+            fs = new FileStream(ruta, FileMode.Create);
+            ser = new BinaryFormatter();
+
+            ser.Serialize(fs, obj);
+            fs.Close();
+
+            return true;
         }
 
         PuntoDat IArchivos<PuntoDat>.Leer(string ruta)
         {
-            throw new NotImplementedException();
+            PuntoDat oPuntoDat = new PuntoDat();
+            FileStream fs;
+            BinaryFormatter ser;
+
+            fs = new FileStream(ruta, FileMode.Open);
+            ser = new BinaryFormatter();
+
+            oPuntoDat = (PuntoDat)ser.Deserialize(fs);            
+
+            return oPuntoDat;
         }
     }
 }
