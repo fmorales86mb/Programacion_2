@@ -111,13 +111,17 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
 
             sb.AppendFormat("Razón Social: {0}", this.razonSocial);
+            sb.AppendLine();
             sb.AppendFormat("Ganancia Total: {0}", Math.Round(this.GananciasPorTotal, 2));
+            sb.AppendLine();
             sb.AppendFormat("Ganancia Total: {0}", Math.Round(this.GananciasPorLocal, 2));
+            sb.AppendLine();
             sb.AppendFormat("Ganancia Total: {0}", Math.Round(this.GananciasPorProvincial, 2));
             sb.AppendLine();
+            sb.AppendLine("------------------------");
             // Mostrar es un método virtual, por lo tanto en tiempo de ejecución va a tomar la implementación del tipo de dato real.
             foreach (Llamada llamada in this.Llamadas)
-                llamada.ToString();
+                sb.AppendLine(llamada.ToString());
 
             return sb.ToString();
         }
@@ -127,7 +131,7 @@ namespace Entidades
         /// <param name="c"></param>
         /// <param name="l"></param>
         /// <returns></returns>
-        public override bool operator ==(Centralita c, Llamada l)
+        public static bool operator ==(Centralita c, Llamada l)
         {
             bool repetido = false;
 
@@ -142,7 +146,7 @@ namespace Entidades
 
             return repetido;
         }
-        public override bool operator !=(Centralita c, Llamada l)
+        public static bool operator !=(Centralita c, Llamada l)
         {
             return !(c == l);
         }
@@ -152,10 +156,10 @@ namespace Entidades
         /// <param name="c"></param>
         /// <param name="l"></param>
         /// <returns></returns>
-        public override Centralita operator +(Centralita c, Llamada l)
+        public static Centralita operator +(Centralita c, Llamada l)
         {
             if (c != l)
-                c.AgregarLlamada(l);
+                 c.AgregarLlamada(l);
 
             return c;
         }

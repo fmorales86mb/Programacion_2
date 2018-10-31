@@ -41,7 +41,7 @@ namespace Entidades
         /// Retorna el valor de la llamada a partir de la duración y el costo de la misma según la franja horaria.
         /// </summary>
         /// <returns></returns>
-        private override float CalcularCosto()
+        private float CalcularCosto()
         {
             float costo = 0;
 
@@ -72,7 +72,9 @@ namespace Entidades
             StringBuilder sb = new StringBuilder(base.Mostrar());
 
             sb.AppendFormat("Franja horaria: {0}", this.franjaHoraria);
+            sb.AppendLine();
             sb.AppendFormat("Costo de la llamada: {0}", this.CostoLlamada.ToString());
+            sb.AppendLine();
             sb.AppendLine("--------------------------------");
 
             return sb.ToString();

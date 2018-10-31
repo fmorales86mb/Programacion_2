@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_40", "Ejercicio_40\Ejercicio_40.csproj", "{02202567-4484-45E7-8AB4-AB1CC707CCE6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{9BE118A0-B039-47A1-BA51-F9EE66509A7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrmCentralita", "FrmCentralita\FrmCentralita.csproj", "{8B238CB1-2766-41AC-814F-2A25C34B9EAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,8 +23,15 @@ Global
 		{9BE118A0-B039-47A1-BA51-F9EE66509A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BE118A0-B039-47A1-BA51-F9EE66509A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BE118A0-B039-47A1-BA51-F9EE66509A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B238CB1-2766-41AC-814F-2A25C34B9EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B238CB1-2766-41AC-814F-2A25C34B9EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B238CB1-2766-41AC-814F-2A25C34B9EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B238CB1-2766-41AC-814F-2A25C34B9EAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6C9E181-C17F-4E2B-AA1D-C9E204AC51AD}
 	EndGlobalSection
 EndGlobal

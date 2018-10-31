@@ -41,11 +41,13 @@ namespace Entidades
         /// Genera un string con los datos de la instancia y clase padre.
         /// </summary>
         /// <returns></returns>
-        public override string Mostrar()
+        protected override string Mostrar()
         {
             StringBuilder sb = new StringBuilder(base.Mostrar());
 
+            sb.AppendLine();
             sb.AppendFormat("Costo de la llamada: {0}", this.CostoLlamada.ToString());
+            sb.AppendLine();
             sb.AppendLine("--------------------------------");
 
             return sb.ToString();
