@@ -54,5 +54,11 @@ namespace Ejercicio_63
         {
             tHora.Start();
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (tHora.IsAlive)
+                tHora.Abort();
+        }
     }
 }
