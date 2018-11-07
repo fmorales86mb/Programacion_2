@@ -1,0 +1,9 @@
+suelen señalizar cambios de estado de un objeto a otro
+
+emisor (obj q dispara, no sabe quién lo recibe)
+delegado (enlace) lista a punteros a funcion
+receptro(caputra - manejador)
+
+
+
+
