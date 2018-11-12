@@ -1,0 +1,34 @@
+- Base de datos
+
+reader trae una coleccion de arrays.
+si no es consulta trae la cant de filas afectadas.
+
+- sql
+
+insert into [tabla] ([campos]) values('string', 'yyyymmdd hh:mm:ss', 3, 3.3, null)
+
+update [tabla]
+set [campo] = valor
+where (siempre con condicion)
+[campo] is (con el == a veces falla) null (sin comillas)
+
+
+select 
+from
+join (ver el join: inner, left, r)
+where
+oreder by
+
+delete (va from?) [tabla]
+where (siempre con condicion, sino borra tabla)
+
+para condicion: =, <, >, is, like '%string'
+para select: max, min, count, sum (repasar!)
+
+- c#
+sqlconexion
+sqlCommand
+
+ver git de ezequiel
+
+Hay que iniciar la base de datos con el icono de escritorio en las pcs del labo.
