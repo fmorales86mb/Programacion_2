@@ -1,0 +1,4 @@
+Creo un delegado
+creo un evento del tipo delegado
+asigno un manejador (método que se ejecutará)
+lanzo el evento con el o los parámetros.
