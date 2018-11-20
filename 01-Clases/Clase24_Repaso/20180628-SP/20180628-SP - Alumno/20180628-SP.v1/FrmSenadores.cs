@@ -96,12 +96,15 @@ namespace _20180628_SP.v1
                     // Guardar resultados
                     dao = new Dao();
                     SerializarXML<Votacion> ser = new SerializarXML<Votacion>();
-                    ser.Guardar("archivoFM.xml", votacion);
+                    
                     short abstenciones, afirmativos, negativos;
+                    votacion.NombreLey = txtLeyNombre.Text;
                     votacion.ContadorAbstencion= short.TryParse(lblAbstenciones.Text, out abstenciones)? abstenciones:(short)0;
                     votacion.ContadorAfirmativo = short.TryParse(lblAfirmativo.Text, out afirmativos) ? afirmativos : (short)0;
                     votacion.ContadorNegativo = short.TryParse(lblNegativo.Text, out negativos) ? negativos : (short)0;
+
                     dao.Guardar(null, votacion);
+                    ser.Guardar("archivoFM.xml", votacion);
                 }
             }
         }
