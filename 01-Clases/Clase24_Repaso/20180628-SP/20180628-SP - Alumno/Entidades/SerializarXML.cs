@@ -14,13 +14,16 @@ namespace Entidades
             bool guardado = true;
             XmlSerializer serializer;
             XmlTextWriter writer = null;
+            string url = Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments);
 
 
-            if (File.Exists(rutaArchivo) && Path.GetExtension(rutaArchivo) == ".xml")
+            //if (File.Exists(url) && Path.GetExtension(rutaArchivo) == ".xml")
+            if (Path.GetExtension(rutaArchivo) == ".xml")
             {
                 try
                 {
-                    writer = new XmlTextWriter(rutaArchivo, Encoding.ASCII);
+                    url += @"\" + rutaArchivo;
+                    writer = new XmlTextWriter(url, Encoding.ASCII);
                     serializer = new XmlSerializer(typeof(T));
                     serializer.Serialize(writer, objeto);
                 }

@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -29,7 +28,7 @@ namespace _20180628_SP.v1
             this.graficos = new List<PictureBox>();
             int x = 20;
             int y = 20;
-            for (int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 72; i++)
             {
                 this.participantes.Add(i.ToString(), Votacion.EVoto.Esperando);
                 PictureBox p = new PictureBox();
@@ -46,18 +45,13 @@ namespace _20180628_SP.v1
                 this.gpbSenado.Controls.Add(p);
                 this.graficos.Add(p);
             }
-
-            
-
         }
 
         public void ManejadorVoto(string senador, Votacion.EVoto voto)
         {
-            Dao dao;            
-            
             if (this.groupBox2.InvokeRequired)
             {
-                Votacion.voto recall = new Votacion.voto(this.ManejadorVoto);
+                Votacion.NOMBRE_EVENTO recall = new Votacion.NOMBRE_EVENTO(this.ManejadorVoto);
                 this.Invoke(recall, new object[] { senador, voto });
             }
             else
@@ -92,16 +86,8 @@ namespace _20180628_SP.v1
                 if (aux == 0)
                 {
                     MessageBox.Show((int.Parse(lblAfirmativo.Text) - int.Parse(lblNegativo.Text)) > 0 ? "Es Ley" : "No es Ley", txtLeyNombre.Text);
-                    
                     // Guardar resultados
-                    dao = new Dao();
-                    SerializarXML<Votacion> ser = new SerializarXML<Votacion>();
-                    ser.Guardar("archivoFM.xml", votacion);
-                    short abstenciones, afirmativos, negativos;
-                    votacion.ContadorAbstencion= short.TryParse(lblAbstenciones.Text, out abstenciones)? abstenciones:(short)0;
-                    votacion.ContadorAfirmativo = short.TryParse(lblAfirmativo.Text, out afirmativos) ? afirmativos : (short)0;
-                    votacion.ContadorNegativo = short.TryParse(lblNegativo.Text, out negativos) ? negativos : (short)0;
-                    dao.Guardar(null, votacion);
+
                 }
             }
         }
@@ -121,14 +107,8 @@ namespace _20180628_SP.v1
             lblAbstenciones.Text = "0";
 
             // EVENTO
-            votacion.EventoVotoEfectuado += this.ManejadorVoto;
-            // THREAD
-            Thread t = new Thread(votacion.Simular);
-            t.Start();
-        }
 
-        private void FrmSenadores_FormClosed(object sender, FormClosedEventArgs e)
-        {
+            // THREAD
 
         }
     }

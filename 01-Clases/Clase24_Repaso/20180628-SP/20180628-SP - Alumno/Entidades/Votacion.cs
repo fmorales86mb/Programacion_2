@@ -66,6 +66,8 @@ namespace Entidades
             }
         }
 
+        // Se agrega Constructor por defecto a fin de poder serializarse.
+        public Votacion() { }
         public Votacion(string nombreLey, Dictionary<string, EVoto> senadores)
         {
             this.nombreLey = nombreLey;
